@@ -124,7 +124,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-DATABASE_URL= os.getenv('DATABASE_URL', 'sqlite:///db.sqlite3')  # Default to SQLite if DATABASE_URL is not set
+#DATABASE_URL= os.getenv('DATABASE_URL', 'sqlite:///db.sqlite3')  # Default to SQLite if DATABASE_URL is not set
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
