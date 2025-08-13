@@ -14,13 +14,13 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+import os
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-zz+)=eby(8$-h)pb353j4-+c2k2ax@f))h@2!b3_!8v8%u_-q('
+SECRET_KEY =os.getenv('SECRET_KEY','django-insecure-zz+)=eby(8$-h)pb353j4-+c2k2ax@f))h@2!b3_!8v8%u_-q(')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -79,9 +79,10 @@ CSRF_TRUSTED_ORIGINS = ['https://kirurumasecondaryschool.onrender.com']  # Add y
 
 import dj_database_url
 import os
+
 if 'DATABASE_URL' in os.environ:
   DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'),conn_max_age=600,ssl_require=True)   # Use dj_database_url to parse the DATABASE_URL environment variable
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))   # Use dj_database_url to parse the DATABASE_URL environment variable
         
     }
 else:
