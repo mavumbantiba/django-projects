@@ -79,14 +79,12 @@ CSRF_TRUSTED_ORIGINS = ['https://kirurumasecondaryschool.onrender.com']  # Add y
 
 import dj_database_url
 import os
-
 if 'DATABASE_URL' in os.environ:
-  DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))   # Use dj_database_url to parse the DATABASE_URL environment variable
-        
-    }
+    DATABASES={
+    'default':dj_database_url.config(default=os.getenv('DATABASE_URL'))   # Use dj_database_url to parse the DATABASE_URL environment variable
+}
 else:
-    DATABASES = {
+   DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
