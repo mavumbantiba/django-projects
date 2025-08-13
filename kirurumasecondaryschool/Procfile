@@ -1,1 +1,1 @@
-web: gunicorn kirurumasecondaryschool.wsgi
+web: gunicorn kirurumasecondaryschool.wsgi --0.0.0.0:$PORT
