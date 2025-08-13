@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-zz+)=eby(8$-h)pb353j4-+c2k2ax@f))h@2!b3_!8v8%u_-q(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://kirurumasecondaryschool.onrender.com/','127.0.0.1','localhost' ]
+#ALLOWED_HOSTS = ['https://kirurumasecondaryschool.onrender.com/','127.0.0.1','localhost' ]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
