@@ -71,13 +71,15 @@ TEMPLATES = [
 WSGI_APPLICATION = 'kirurumasecondaryschool.wsgi.application'
 
 
+SECUREPROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')  # For handling SSL in production
+CSRF_TRUSTED_ORIGINS = ['https://kirurumasecondaryschool.onrender.com']  # Add your domain here
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 import dj_database_url
 import os
 DATABASES = {
-    'default': dj_database_url.config(default='DATABASE_URL')   # Use dj_database_url to parse the DATABASE_URL environment variable
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'),conn_max_age=600,ssl_require=True)   # Use dj_database_url to parse the DATABASE_URL environment variable
         
     }
 
@@ -113,6 +115,7 @@ USE_I18N = True
 
 USE_TZ = True
 
+DATABASE_URL= os.getenv('DATABASE_URL', 'sqlite:///db.sqlite3')  # Default to SQLite if DATABASE_URL is not set
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
