@@ -150,6 +150,7 @@ pyphen==0.17.2
 pypng==0.20220715.0
 PySDL2==0.9.17
 python-dateutil==2.9.0.post0
+python-decouple==3.8
 python-json-logger==3.3.0
 python-multipart==0.0.20
 pytz==2025.2
