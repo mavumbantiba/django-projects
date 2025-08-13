@@ -154,7 +154,6 @@ python-json-logger==3.3.0
 python-multipart==0.0.20
 pytz==2025.2
 pyui==0.1.0
-pywinpty==2.0.15
 PyYAML==6.0.2
 pyzbar==0.1.9
 pyzmq==27.0.0
