@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-zz+)=eby(8$-h)pb353j4-+c2k2ax@f))h@2!b3_!8v8%u_-q(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['kirurumasecondaryschool.onrender.com' ]
+ALLOWED_HOSTS = ['kirurumasecondaryschool.onrender.com','127.0.0.1','localhost' ]
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'kirurumasecondaryschool',  # Your app name
+    'SchoolManagementSystem',  # Your app name
 ]
 
 MIDDLEWARE = [
